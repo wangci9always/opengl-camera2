@@ -6,11 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.maniu.openglfilter.CameraView
+    <com.example.openglfilter.CameraView
         android:id="@+id/cameraView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <CheckBox
+        android:id="@+id/open_beauty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="开启美颜" />
+
+    <Button
+        android:id="@+id/git_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="toSavePic"
+        android:text="截图" />
+
+    <CheckBox
+        android:id="@+id/open_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/open_beauty"
+        android:text="打开滤镜" />
+
+    <CheckBox
+        android:id="@+id/open_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/open_filter"
+        android:text="打开特效1" />
+    <CheckBox
+        android:id="@+id/open_effect2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="打开特效2" />
 
     <RadioGroup
         android:id="@+id/rg_speed"
@@ -20,7 +58,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:background="@drawable/record_speed_background"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <RadioButton
             android:id="@+id/btn_extra_slow"
@@ -74,7 +113,7 @@
             android:textColor="@drawable/record_speed_button_text" />
     </RadioGroup>
 
-    <com.maniu.openglfilter.widget.RecordButton
+    <com.example.openglfilter.widget.RecordButton
         android:id="@+id/btn_record"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -83,5 +122,5 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/record_button_background"
         android:gravity="center"
-        android:text="按住拍"/>
+        android:text="按住拍" />
 </RelativeLayout>

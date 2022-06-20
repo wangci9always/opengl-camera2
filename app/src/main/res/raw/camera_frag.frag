@@ -1,4 +1,5 @@
 #extension GL_OES_EGL_image_external : require
+precision mediump float; // 数据精度
 //必须 写的 固定的  意思   用采样器
 //所有float类型数据的精度是lowp
 varying vec2 aCoord;
